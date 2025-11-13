@@ -1,8 +1,14 @@
 lentoasemat= {}
 while True:
     kysymys= input('lisää uusi lentoasema syöttämällä A. hae lentoasema syöttämällä B.'
-                   'Jos haluat lopettaa syötä C ')
+                   'Jos haluat lopettaa syötä C. ')
     if kysymys== 'A':
         ICAO= input('anna ICAO-Koodi')
         Lentoasema= input('Anna lentoaseman nimi')
         lentoasemat[ICAO]= Lentoasema
+    if kysymys=='B':
+        haku=input('kerro lentäkentän ICAO-koodi')
+        print(f'Lentokenttäsi {haku} on {lentoasemat[haku]} ')
+    if kysymys=='C':
+        break
+print('Kiitos että käytit palveluitamme')
